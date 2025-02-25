@@ -1,0 +1,13 @@
+name: hola-mundo #workflow name
+on: [push] #the trigger
+jobs:
+  hola-mundo: #Hola mundo
+    runs-on: ubuntu-latest
+    steps: #job steps list
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Run file
+        run: node holaMundo.js
+        
